@@ -1,0 +1,17 @@
+This chrome extension generates barcode for selected text.
+
+
+Notes:
+---
+This extension uses JS-HTML5-QRCode-Generator (MIT) for generating barcode.
+
+Author: 
+---
+Pai Peng www.paipeng.com
+
+Copyright (c) 2015 Pai Peng
+
+License: 
+---
+MIT
+
