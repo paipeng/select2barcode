@@ -10,7 +10,7 @@
   },
   "permissions": ["<all_urls>"],
   "browser_action": {
-    "default_title": "Copy2Barcode",
+    "default_title": "Select2Barcode",
     "default_icon": "icon_128.png",
     "default_popup": "popup.html"
   }
