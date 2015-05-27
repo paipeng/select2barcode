@@ -9,9 +9,10 @@ function onSelection(payload) {
         //eventPage.getBgColors("");
 
         //var t = eventPage.getSelectedText();
-        eventPage.getBgColors(payload.text);
+        //eventPage.getBgColors(payload.text);
         //pasteSelection(eventPage);
 
+        updateQRCode(payload.text);
     });
     chrome.extension.onMessage.removeListener(window.onSelection);
 };
@@ -19,4 +20,21 @@ function onSelection(payload) {
 chrome.extension.onMessage.addListener(onSelection);
 
 chrome.tabs.executeScript(null, { file: "content.js" });
+
+function updateQRCode(text) {
+
+    var element = document.getElementById("qrcode");
+
+    var bodyElement = document.body;
+    if(element.lastChild)
+        element.replaceChild(showQRCode(text), element.lastChild);
+    else
+        element.appendChild(showQRCode(text));
+
+}
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    updateQRCode('http://www.paipeng.com');
+});
 
