@@ -34,6 +34,7 @@ function updateQRCode(text) {
 }
 
 
+
 document.addEventListener("DOMContentLoaded", function() {
     updateQRCode('http://www.paipeng.com');
 });
